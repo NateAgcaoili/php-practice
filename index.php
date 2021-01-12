@@ -6,34 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        //string practice
-        $phrase = "Let's GOOOO";
-        echo strtolower($phrase);
-        echo strtoupper($phrase);
-        echo strlen($phrase);
-        echo $phrase[0];
-        echo str_replace("GOOOO", "not.", $phrase);
-        echo substr($phrase, 6, 5);
-        //number practice
-        echo 5 + 9;
-        $demoNum = 1;
-        $demoNum++;
-        echo $demoNum;
-        $demoNum += 10;
-        echo $demoNum;
-        echo abs(-100);
-        echo pow(2, 4);
-        echo sqrt(16);
-        echo pow(16, 0.5);
-        echo max(2, 10);
-        echo min(2, 10);
-        echo round(1.5);
-        echo round(1.44);
-        echo ceil(1.5);
-        echo ceil(1.44);
-        echo floor(1.5);
-        echo floor(1.44);
-    ?>
+    <form action="index.php" method="get">
+        Name: <input type="text" name="name">
+        <br>
+        Age: <input type="text" name="age">
+        <input type="submit">
+    </form>
+    <br>
+    Your name is: <?php echo $_GET["name"]?>
+    <br>
+    Your age is: <?php echo $_GET["age"]?>
 </body>
 </html>
