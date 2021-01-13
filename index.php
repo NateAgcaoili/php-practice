@@ -6,14 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-        <input type="text" name="student"><br>
-        <input type="submit">
-    </form>
+
     <?php
-        $studentGrade = $_POST["student"];
-        $grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
-        echo $grades[$studentGrade];
+        function sayHi($name) {
+            echo "Hello $name <br>";
+        }
+        sayHi("Nate");
+
+        function cube($num) {
+            return pow($num, 3);
+        }
+        echo cube(2);
+        echo "<br>";
+
+        $isMale = false;
+        if ($isMale) {
+            echo "He is male! <br>";
+        } elseif (!$isMale) {
+            echo "He is not male! <br>";
+        }
+        if ($isMale && !$isMale) {
+            echo "This is impossible <br>";
+        }
+        if ($isMale || !$isMale) {
+            echo "He might be a male, he might not be! <br>";
+        }
+
+        function getMax($numOne, $numTwo) {
+            if ($numOne > $numTwo) {
+                echo "$numOne is greater than $numTwo <br>";
+            } elseif ($numOne < $numTwo) {
+                echo "$numTwo is greater than $numOne <br>";
+            } else {
+                echo "$numOne is equal to $numTwo <br>";
+            }
+        }
+        getMax(1,4);
+        getMax(8,3);
+        getMax(6,6);
+
     ?>
+
 </body>
 </html>
