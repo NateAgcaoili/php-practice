@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-        Password: <input type="password" name="password">
-        <input type="submit">
-    </form>
-    <br>
-    <?php echo $_POST["password"]?>
+    
+    <?php 
+        $friends = array("Arielle", "Nuggie", "Lez", "Squirt", "Thomas");
+        echo $friends[0];
+        echo count($friends);
+    ?>
 </body>
 </html>
