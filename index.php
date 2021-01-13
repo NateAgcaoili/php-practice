@@ -6,15 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="get">
-        Name: <input type="text" name="name">
-        <br>
-        Age: <input type="text" name="age">
+    <form action="index.php" method="post">
+        Password: <input type="password" name="password">
         <input type="submit">
     </form>
     <br>
-    Your name is: <?php echo $_GET["name"]?>
-    <br>
-    Your age is: <?php echo $_GET["age"]?>
+    <?php echo $_POST["password"]?>
 </body>
 </html>
