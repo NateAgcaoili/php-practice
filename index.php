@@ -6,11 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <?php 
-        $friends = array("Arielle", "Nuggie", "Lez", "Squirt", "Thomas");
-        echo $friends[0];
-        echo count($friends);
+    <form action="index.php" method="post">
+        <input type="text" name="student"><br>
+        <input type="submit">
+    </form>
+    <?php
+        $studentGrade = $_POST["student"];
+        $grades = array("Jim"=>"A+", "Pam"=>"B-", "Oscar"=>"C+");
+        echo $grades[$studentGrade];
     ?>
 </body>
 </html>
