@@ -6,45 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-
+    <form action="index.php" method="post">
+        <input type="text" name="grade">
+        <input type="submit">
+    </form>
     <?php
-        function sayHi($name) {
-            echo "Hello $name <br>";
+        $grade = $_POST["grade"];
+        switch($grade) {
+            case "A":
+                echo "You did amazing!";
+                break;
+            case "B":
+                echo "You did pretty good.";
+                break;
+            case "C":
+                echo "You did poorly.";
+                break;
+            case "D":
+                echo "You did very bad.";
+                break;
+            case "F":
+                echo "YOU FAILED!";
+                break;
+            default:
+                echo "Invalid grade.";
         }
-        sayHi("Nate");
-
-        function cube($num) {
-            return pow($num, 3);
-        }
-        echo cube(2);
-        echo "<br>";
-
-        $isMale = false;
-        if ($isMale) {
-            echo "He is male! <br>";
-        } elseif (!$isMale) {
-            echo "He is not male! <br>";
-        }
-        if ($isMale && !$isMale) {
-            echo "This is impossible <br>";
-        }
-        if ($isMale || !$isMale) {
-            echo "He might be a male, he might not be! <br>";
-        }
-
-        function getMax($numOne, $numTwo) {
-            if ($numOne > $numTwo) {
-                echo "$numOne is greater than $numTwo <br>";
-            } elseif ($numOne < $numTwo) {
-                echo "$numTwo is greater than $numOne <br>";
-            } else {
-                echo "$numOne is equal to $numTwo <br>";
-            }
-        }
-        getMax(1,4);
-        getMax(8,3);
-        getMax(6,6);
-
     ?>
 
 </body>
