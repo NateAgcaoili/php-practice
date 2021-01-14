@@ -6,20 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-        <input type="text" name="grade">
-        <input type="submit">
-    </form>
-    <?php
-        $index = 1;
-        while($index <= 5) {
-            echo "$index <br>";
-            $index++;
-        }
-        for ($i = 0; $i <= 5; $i++) {
-            echo "$i <br>";
-        }
-    ?>
-
+    <?php include "header.html" ?>
+    <p>Hello World</p>
+    <?php include "footer.html" ?>
+    
 </body>
 </html>
