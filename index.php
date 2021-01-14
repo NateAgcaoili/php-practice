@@ -7,11 +7,18 @@
 </head>
 <body>
     <?php
-        $title = "Nate's Article";
-        $author = "Nate";
-        $wordCount = 69;
-        include "article-header.php";
-    
+        class Book {
+            var $title;
+            var $author;
+            var $pages;
+        }
+        
+        $book1 = new Book;
+        $book1->title = "Harry Potter";
+        $book1->author = "JK Rowling";
+        $book->pages = 400;
+
+        echo $book1->title;
     ?>
     
 </body>
