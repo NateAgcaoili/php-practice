@@ -7,23 +7,30 @@
 </head>
 <body>
     <?php
-        class Book {
-            var $title;
-            var $author;
-            var $pages;
+        class Movie {
+            public $name;
+            private $rating;
 
-            function __construct($title, $author, $pages) {
-                $this->title = $title;
-                $this->author = $author;
-                $this->pages = $pages;
+
+            function __construct($name, $rating) {
+                $this->name = $name;
+                $this->rating = $rating;
+            }
+
+            function getRating() {
+                return $this->rating;
+            }
+
+            function setRating($rating) {
+                $this->rating = $rating;
             }
         }
 
-        $book1 = new Book("Harry Potter", "JK Rowling", 520);
-        $book2 = new Book("Nate's Book", "Nate", 69);
-
-        echo $book2->pages;
-        echo $book1->title;
+        $avengers = new Movie("Avengers", "PG-13");
+        echo $avengers->getRating();
+        $avengers->setRating("G");
+        echo $avengers->getRating();
+        
     ?>
     
 </body>
