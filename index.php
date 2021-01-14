@@ -11,25 +11,13 @@
         <input type="submit">
     </form>
     <?php
-        $grade = $_POST["grade"];
-        switch($grade) {
-            case "A":
-                echo "You did amazing!";
-                break;
-            case "B":
-                echo "You did pretty good.";
-                break;
-            case "C":
-                echo "You did poorly.";
-                break;
-            case "D":
-                echo "You did very bad.";
-                break;
-            case "F":
-                echo "YOU FAILED!";
-                break;
-            default:
-                echo "Invalid grade.";
+        $index = 1;
+        while($index <= 5) {
+            echo "$index <br>";
+            $index++;
+        }
+        for ($i = 0; $i <= 5; $i++) {
+            echo "$i <br>";
         }
     ?>
 
