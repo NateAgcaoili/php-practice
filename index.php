@@ -6,9 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "header.html" ?>
-    <p>Hello World</p>
-    <?php include "footer.html" ?>
+    <?php
+        $title = "Nate's Article";
+        $author = "Nate";
+        $wordCount = 69;
+        include "article-header.php";
+    
+    ?>
     
 </body>
 </html>
